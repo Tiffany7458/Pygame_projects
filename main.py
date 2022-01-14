@@ -1,16 +1,24 @@
-# This is a sample Python script.
+import pygame
+import random
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+pygame.init()
 
+WHITE = (225, 225, 225)
+BLACK = (0, 0, 0)
+RED = (225, 0, 0)
+GREEN = (0, 225, 0)
+BLUE = (0, 0, 225)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
 
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.image.load("./images/wukong.jpg")
+        self.image = pygame.transform.scale(self.image, (50, 44))
+        self.rect = self.image.get_rect()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+class Block(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__int__()
