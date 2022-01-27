@@ -18,7 +18,7 @@ TITLE = "<WUKONG>"
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("./images/wukongg.png")
+        self.image = pygame.image.load("./images/wukong.png")
         self.image = pygame.transform.scale(self.image, (160, 141))
         self.image.set_colorkey(WHITE)
         self.rect = self.image.get_rect()
@@ -53,7 +53,7 @@ class Player(pygame.sprite.Sprite):
 class Background(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("./images/wukongbackground.jpg")
+        self.image = pygame.image.load("./images/background.jpg")
         self.image = pygame.transform.scale(self.image, (SCREEN_WIDTH, SCREEN_HEIGHT))
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = (0, 0)
@@ -61,7 +61,7 @@ class Background(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
-        self.image = pygame.image.load("./images/baigujingg.png")
+        self.image = pygame.image.load("./images/baigujing.png")
         self.image = pygame.transform.scale(self.image, (106, 147))
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = (
